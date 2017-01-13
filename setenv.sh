@@ -27,4 +27,8 @@ JAVA_OPTS="-XX:ErrorFile=$CATALINA_HOME/logs/hs_err_pid%p.log $JAVA_OPTS"
 # JAVA_OPTS="-XX:+UnlockCommercialFeatures $JAVA_OPTS"
 # JAVA_OPTS="-XX:+FlightRecorder $JAVA_OPTS"
 
+# JAVA_OPTS="-Dsun.net.client.defaultReadTimeout=60000 $JAVA_OPTS"
+# JAVA_OPTS="-Dsun.net.client.defaultConnectTimeout=30000 $JAVA_OPTS"
+# JAVA_OPTS="-Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2 $JAVA_OPTS"
+
 LANG="en_US"
