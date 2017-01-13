@@ -27,8 +27,4 @@ JAVA_OPTS="-XX:ErrorFile=$CATALINA_HOME/logs/hs_err_pid%p.log $JAVA_OPTS"
 # JAVA_OPTS="-XX:+UnlockCommercialFeatures $JAVA_OPTS"
 # JAVA_OPTS="-XX:+FlightRecorder $JAVA_OPTS"
 
-# For debugging
-# JPDA_SUSPEND=n
-# JPDA_ADDRESS=8787
-
 LANG="en_US"
