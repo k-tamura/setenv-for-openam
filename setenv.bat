@@ -9,6 +9,10 @@ REM For JDK 8
 set JAVA_OPTS=%JAVA_OPTS% -XX:MetaspaceSize=256m
 set JAVA_OPTS=%JAVA_OPTS% -XX:MaxMetaspaceSize=256m
 
+set JAVA_OPTS=%JAVA_OPTS% -Dsun.net.client.defaultReadTimeout=60000
+set JAVA_OPTS=%JAVA_OPTS% -Dsun.net.client.defaultConnectTimeout=30000
+set JAVA_OPTS=%JAVA_OPTS% -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2
+
 set JAVA_OPTS=%JAVA_OPTS% -Xloggc:%CATALINA_HOME%\logs\gc.log
 set JAVA_OPTS=%JAVA_OPTS% -XX:+UseConcMarkSweepGC
 set JAVA_OPTS=%JAVA_OPTS% -XX:+UseCMSCompactAtFullCollection
@@ -19,6 +23,7 @@ set JAVA_OPTS=%JAVA_OPTS% -XX:+PrintGCDateStamps
 set JAVA_OPTS=%JAVA_OPTS% -XX:+UseGCLogFileRotation
 set JAVA_OPTS=%JAVA_OPTS% -XX:NumberOfGCLogFiles=5
 set JAVA_OPTS=%JAVA_OPTS% -XX:GCLogFileSize=10M
+
 set JAVA_OPTS=%JAVA_OPTS% -XX:+HeapDumpOnOutOfMemoryError
 set JAVA_OPTS=%JAVA_OPTS% -XX:HeapDumpPath=%CATALINA_HOME%\logs\
 set JAVA_OPTS=%JAVA_OPTS% -XX:ErrorFile=%CATALINA_HOME%\logs\hs_err_pid%p.log
@@ -26,9 +31,5 @@ set JAVA_OPTS=%JAVA_OPTS% -XX:ErrorFile=%CATALINA_HOME%\logs\hs_err_pid%p.log
 REM For commercial use when using Oracle Java
 REM set JAVA_OPTS=%JAVA_OPTS% -XX:+UnlockCommercialFeatures
 REM set JAVA_OPTS=%JAVA_OPTS% -XX:+FlightRecorder
-
-REM set JAVA_OPTS=%JAVA_OPTS% -Dsun.net.client.defaultReadTimeout=60000
-REM set JAVA_OPTS=%JAVA_OPTS% -Dsun.net.client.defaultConnectTimeout=30000
-REM set JAVA_OPTS=%JAVA_OPTS% -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2
 
 set LANG=en_US
