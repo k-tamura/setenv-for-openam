@@ -33,3 +33,5 @@ REM set JAVA_OPTS=%JAVA_OPTS% -XX:+UnlockCommercialFeatures
 REM set JAVA_OPTS=%JAVA_OPTS% -XX:+FlightRecorder
 
 set LANG=en_US
+
+exit /b 0
